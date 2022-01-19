@@ -1,0 +1,22 @@
+{
+  "name": "infra",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"lerna run --parallel dev\" \"node index.js\""
+  },
+  "keywords": [
+    "infra"
+  ],
+  "author": "Karl Musingo && Sudi David",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.0.0",
+    "lerna": "^4.0.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
