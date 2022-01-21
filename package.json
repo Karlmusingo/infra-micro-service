@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently \"lerna run --parallel dev\" \"node index.js\""
+    "dev": "concurrently \"lerna run --parallel dev\" \"node index.js\"",
+    "build": "lerna run --parallel build",
+    "start": "lerna run --parallel start:prod",
+    "start:prod": "concurrently \"lerna run --parallel start:prod\" \"lerna run --parallel start\""
   },
   "keywords": [
     "infra"

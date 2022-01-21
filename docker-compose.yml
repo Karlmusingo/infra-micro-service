@@ -1,0 +1,20 @@
+version: "3.3"
+
+services:
+  client:
+    image: infra/client
+    build:
+      context: .
+      dockerfile: ./packages/client/Dockerfile
+    ports:
+      - "3000:80"
+    restart: unless-stopped
+
+  auth:
+    image: infra/auth
+    build:
+      context: .
+      dockerfile: ./packages/auth/Dockerfile
+    ports:
+      - "4000:8080"
+    restart: unless-stopped
